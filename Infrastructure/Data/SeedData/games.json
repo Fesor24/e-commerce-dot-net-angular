@@ -3,7 +3,7 @@
     "Name": "Resident Evil",
     "Description": "A Japanese horror game series and a media franchise created by Capcom. son shooter games, with players typically surviving in environments filled with zombies and other creatures",
     "Price": 200,
-    "PictureUrl": "images/games/sb-ang1.png",
+    "PictureUrl": "images/games/resident-evil.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 8
   },
@@ -11,7 +11,7 @@
     "Name": "Star Wars",
     "Description": "From a galaxy far, far away comes action and adventure with the heroes and villians of Star Wars. Master the art of starfighter combat in the authentic piloting experience. Master your hero's journey and play through massive battles across iconic locations in all three cinematic eras",
     "Price": 150,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/star-wars.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 7
   },
@@ -20,7 +20,7 @@
     "Name": "NBA 2K",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 130,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/nba2k.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 8
   },
@@ -28,7 +28,7 @@
     "Name": "The witcher 3",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 90.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/witcher.jfif",
     "ConsoleDeviceId": 5,
     "GenreId": 6
   },
@@ -36,7 +36,7 @@
     "Name": "Call of Duty",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 150.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/call-of-duty.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 5
   },
@@ -44,7 +44,7 @@
     "Name": "Warcraft",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 80.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/warcraft.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 4
   },
@@ -52,7 +52,7 @@
     "Name": "Minecraft",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 80.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/minecraft.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 3
   },
@@ -60,7 +60,7 @@
     "Name": "GTA Vice City",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 200.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/gta.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 3
   },
@@ -68,7 +68,7 @@
     "Name": "Sims",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 60.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/sims.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 3
   },
@@ -76,7 +76,7 @@
     "Name": "Age of Empires",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 180.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/age-of-empires.jfif",
     "ConsoleDeviceId": 5,
     "GenreId": 4
   },
@@ -84,7 +84,7 @@
     "Name": "Command & Conquer",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 100.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/command-and-conquer.jfif",
     "ConsoleDeviceId": 3,
     "GenreId": 4
   },
@@ -92,7 +92,7 @@
     "Name": "DOOM",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 130.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/DOOM.jfif",
     "ConsoleDeviceId": 5,
     "GenreId": 5
   },
@@ -100,7 +100,7 @@
     "Name": "Half-life",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 120.40,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Half-life.jfif",
     "ConsoleDeviceId": 3,
     "GenreId": 5
   },
@@ -108,7 +108,7 @@
     "Name": "Gears of War",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 90.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/gears-of-war.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 5
   },
@@ -116,7 +116,7 @@
     "Name": "The Division",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 50.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/The-Division.jfif",
     "ConsoleDeviceId": 3,
     "GenreId": 5
   },
@@ -124,7 +124,7 @@
     "Name": "Halo",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 170.40,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Halo.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 5
   },
@@ -132,7 +132,7 @@
     "Name": "Skyrim",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 220.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/skyrim.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 6
   },
@@ -140,7 +140,7 @@
     "Name": "Fallout4",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 120.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Fallout.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 6
   },
@@ -148,7 +148,7 @@
     "Name": "Motorsport",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 200.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/gta.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 1
   },
@@ -156,7 +156,7 @@
     "Name": "FIFA 23",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 200.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Fifa23.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 1
   },
@@ -164,7 +164,7 @@
     "Name": "FIFA 22",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 180.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Fifa22.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 1
   },
@@ -172,7 +172,7 @@
     "Name": "Assasin Creed",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 170.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/sb-ang2.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 7
   },
@@ -180,7 +180,7 @@
     "Name": "Monkey Island",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 100.30,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Assasin-creed.jfif",
     "ConsoleDeviceId": 2,
     "GenreId": 7
   },
@@ -188,7 +188,7 @@
     "Name": "Watch Dogs",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 120.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Watch-Dogs.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 7
   },
@@ -196,7 +196,7 @@
     "Name": "Titan Fall",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 170.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/TitanFall.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 7
   },
@@ -204,7 +204,7 @@
     "Name": "The Long Dark",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 120.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/TheLongDark.jfif",
     "ConsoleDeviceId": 1,
     "GenreId": 8
   },
@@ -212,7 +212,7 @@
     "Name": "Don't Starve",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
     "Price": 170.50,
-    "PictureUrl": "images/games/sb-ang2.png",
+    "PictureUrl": "images/games/Dont-Starve.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 7
   }
