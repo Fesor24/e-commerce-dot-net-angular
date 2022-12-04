@@ -1,3 +1,4 @@
+using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+await app.ConfigureDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
