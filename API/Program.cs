@@ -1,7 +1,10 @@
+using API.Errors;
 using API.Extensions;
 using API.Helper;
+using API.Middleware;
 using Core.Interfaces;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,16 +26,21 @@ builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//configuring our ApiBehaviorOptions so we can set our ApiValidationResponse
+builder.Services.AddApiBehaviorOptions();
+
 var app = builder.Build();
 
 await app.ConfigureDatabase();
 
+app.UseMiddleware<ExceptionMiddleware>();
+
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+
+app.UseSwaggerUI();
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 app.UseHttpsRedirection();
 
