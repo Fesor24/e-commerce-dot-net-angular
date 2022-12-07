@@ -1,4 +1,6 @@
-﻿using Infrastructure.Data;
+﻿using API.Errors;
+using Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Extensions
@@ -28,5 +30,25 @@ namespace API.Extensions
                 }
             }
         }
+
+        public static void AddApiBehaviorOptions(this IServiceCollection service) =>
+            service.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = actionContext =>
+                {
+                    var errors = actionContext.ModelState
+                        .Where(e => e.Value.Errors.Count > 0)
+                        .SelectMany(x => x.Value.Errors)
+                        .Select(x => x.ErrorMessage)
+                        .ToArray();
+
+                    var errorResponse = new ApiValidationErrorResponse
+                    {
+                        Error = errors
+                    };
+
+                    return new BadRequestObjectResult(errorResponse);
+                };
+            });
     }
 }
