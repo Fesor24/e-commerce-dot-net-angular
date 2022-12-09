@@ -1,5 +1,6 @@
 ﻿using API.DTOs;
 using API.Errors;
+using API.Helper;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -41,11 +42,23 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<GamesToReturnDto>>> GetAllGames()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<Pagination<GamesToReturnDto>>> GetAllGames([FromQuery] GamesSpecParams gamesSpec)
         {
-            var spec = new GamesWithGenreAndConsoleSpecification();
+            var spec = new GamesWithGenreAndConsoleSpecification(gamesSpec);
+
+            //In this spec, we have applied filters to our games and we are basically returning an IQueryable
+            //If no filters were applied, it will return all games
+            var countSpec = new GamesWithFiltersCountSpecification(gamesSpec);
+
+            //We are applying the count async method to our countSpec
+            var totalItems = await _gamesRepo.CountAsync(countSpec);
+
             var games = await _gamesRepo.ListAsync(spec);
-            return Ok(_mapper.Map<IReadOnlyList<Games>, IReadOnlyList<GamesToReturnDto>>(games));
+
+            var data = _mapper.Map<IReadOnlyList<GamesToReturnDto>>(games);
+
+            return Ok(new Pagination<GamesToReturnDto>(gamesSpec.PageIndex, gamesSpec.PageSize, totalItems, data));
         }
 
     }
