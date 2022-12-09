@@ -150,7 +150,7 @@
     "Price": 200.50,
     "PictureUrl": "images/games/gta.jfif",
     "ConsoleDeviceId": 1,
-    "GenreId": 1
+    "GenreId": 2
   },
   {
     "Name": "FIFA 23",
@@ -215,5 +215,13 @@
     "PictureUrl": "images/games/Dont-Starve.jfif",
     "ConsoleDeviceId": 4,
     "GenreId": 7
+  },
+  {
+    "Name": "Need For Speed",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillium dolore eu fugiat nulla pariatur.",
+    "Price": 250.50,
+    "PictureUrl": "images/games/gta.jfif",
+    "ConsoleDeviceId": 1,
+    "GenreId": 2
   }
 ]
