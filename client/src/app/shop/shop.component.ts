@@ -12,7 +12,7 @@ import { ShopService } from './shop.service';
 })
 export class ShopComponent implements OnInit {
  
-  @ViewChild('search') searchTerm!: ElementRef
+  @ViewChild('search', {static:false}) searchTerm!: ElementRef
 //initializing the games array variable  
 games?: IGames[] = [];
 

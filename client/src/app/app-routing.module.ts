@@ -9,8 +9,8 @@ const routes: Routes = [
   {path: 'server-error', component: ServerErrorComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(x => x.ShopModule)},
-  //this is a wild card, when someone enters a bad url, he will be redirected to the home page
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  //this is a wild card, when someone enters a bad url, he will be redirected to the not-found page
+  {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <section class="col-3">
-
+            <ng-container *ngIf="genres && consoleDevices">
             <h5 class="text-warning ms-3">Sort</h5>
             <select class="custom-select" (change)="onSortSelected($event)">
                 <option *ngFor="let option of sortOptions"
@@ -31,6 +31,7 @@
             {{device.name}}</li>
             
           </ul>
+            </ng-container>
         </section>
 
 
@@ -44,7 +45,7 @@
                 ></app-paging-header>
                 
 
-                <div class="form-inline mt-2 d-flex flex-wrap">
+                <div class="form-inline mt-2 d-flex flex-wrap" *ngIf="games">
                     <input (keyup.enter)="onSearch()" class="form-control me-2" style="width:300px" #search placeholder="search" type="text">
 
                     <button (click)="onSearch()" class="btn btn-outline-primary mb-2">Search</button>
