@@ -1,11 +1,13 @@
 <div class="container-fluid">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <h2>GAM<span class="text-danger">ES</span></h2>
+      <h2 routerLink="/" style="cursor:pointer">GAM<span class="text-danger">ES</span></h2>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-uppercase">
+        <li><a routerLink="/" class="nav-link px-2" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}"
+          >Home</a></li>
+        <li><a routerLink="/shop" class="nav-link px-2" routerLinkActive="active">Shop</a></li>
+        <li><a href="#" class="nav-link px-2">Pricing</a></li>
       </ul>
 
       <div class="d-flex align-items-end col-md-3 text-end">

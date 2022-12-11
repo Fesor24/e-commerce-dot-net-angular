@@ -5,6 +5,7 @@ import { IGenre } from '../shared/Models/genre';
 import { IPagination } from '../shared/Models/pagination';
 import {map} from 'rxjs/operators';
 import { ShopParams } from '../shared/Models/shopParams';
+import { IGames } from '../shared/Models/games';
 
 @Injectable({
   providedIn: 'root'
@@ -75,5 +76,9 @@ getGenre(){
 //this returns an observable
 getConsole(){
   return this.http.get<IConsole[]>(this.baseUrl + 'games/console');
+}
+
+getProduct(id:number){
+return this.http.get<IGames>(this.baseUrl + 'games/' + id);
 }
 }

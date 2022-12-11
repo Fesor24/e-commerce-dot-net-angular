@@ -3,7 +3,7 @@
     
 
     <div class="card-body d-flex flex-column">
-        <a href="#">
+        <a routerLink="/shop/{{game.id}}">
             <h6 class="text-uppercase">{{game.name}}</h6>
         </a>
 
@@ -13,7 +13,7 @@
           <button type="button" class="btn btn-outline-secondary me-2">
             <i class="fa-solid fa-cart-shopping"></i>
             </button>
-          <button type="button" class="btn btn-outline-secondary">View</button>
+          <button routerLink="/shop/{{game.id}}" type="button" class="btn btn-outline-secondary">View</button>
         </div>
       
     </div>
