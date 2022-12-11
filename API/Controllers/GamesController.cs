@@ -61,5 +61,20 @@ namespace API.Controllers
             return Ok(new Pagination<GamesToReturnDto>(gamesSpec.PageIndex, gamesSpec.PageSize, totalItems, data));
         }
 
+        [HttpGet("Genre")]
+        public async Task<ActionResult<IReadOnlyList<Genre>>> GetAllGenres()
+        {
+            var allGenres = await _genreRepo.ListAllAsync();
+
+            return Ok(allGenres);
+        }
+
+        [HttpGet("Console")]
+        public async Task<ActionResult<IReadOnlyList<ConsoleDevice>>> GetAllDevice()
+        {
+            var allDevice = await _consoleRepo.ListAllAsync();
+            return Ok(allDevice);
+        }
+
     }
 }
