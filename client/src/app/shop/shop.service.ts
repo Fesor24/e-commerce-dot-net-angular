@@ -13,6 +13,7 @@ import { IGames } from '../shared/Models/games';
 export class ShopService {
   baseUrl = 'https://localhost:7262/api/'
 
+
   constructor(private http: HttpClient) { }
 
   //making a call to our api to return all games
