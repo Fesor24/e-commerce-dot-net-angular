@@ -13,6 +13,7 @@ namespace Infrastructure.Data
     public class ShoppingCartRepository : IShoppingCartRepository
     {
         private readonly IDatabase database;
+
         public ShoppingCartRepository(IConnectionMultiplexer redis)
         {
             this.database = redis.GetDatabase();

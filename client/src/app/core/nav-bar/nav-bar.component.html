@@ -11,9 +11,9 @@
       </ul>
 
       <div class="d-flex align-items-end col-md-3 text-end">
-        <a>
+        <a routerLink="/basket">
             <i class="fa-solid fa-cart-shopping"></i>
-            <div class="cart-no">5</div>
+            <div *ngIf="(basket$ | async) as basket" class="cart-no">{{basket.items.length}}</div>
         </a>
       </div>
 

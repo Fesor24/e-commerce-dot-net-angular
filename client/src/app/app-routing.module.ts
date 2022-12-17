@@ -9,6 +9,8 @@ const routes: Routes = [
   {path: 'server-error', component: ServerErrorComponent},
   {path: 'not-found', component: NotFoundComponent},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(x => x.ShopModule)},
+  {path : 'basket', loadChildren: () => import('./basket/basket.module').then(x => x.BasketModule)},
+  {path: 'checkout', loadChildren: () => import('./checkout/checkout.module').then(x => x.CheckoutModule)},
   //this is a wild card, when someone enters a bad url, he will be redirected to the not-found page
   {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
 ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BasketService } from 'src/app/basket/basket.service';
 import { IGames } from 'src/app/shared/Models/games';
 import { ShopService } from '../shop.service';
 
@@ -12,12 +13,30 @@ export class GameDetailComponent implements OnInit {
 
   game!: IGames;
 
+  quantity = 1;
+
   //ActivatedRoute gives us access to the route parameters
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute){}
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute,
+    private basketService: BasketService){}
 
   ngOnInit(): void {
     this.getGame();
   }
+
+addItemToBasket(){
+this.basketService.addItemToBasket(this.game, this.quantity)
+}
+
+incrementQuantity(){
+  this.quantity++;
+}
+
+decrementQuantity(){
+  if(this.quantity > 1){
+    this.quantity--;
+  }
+
+}
 
   getGame(){
     this.shopService.getProduct(+this.activatedRoute.snapshot.paramMap.get('id')!).subscribe((response => {
