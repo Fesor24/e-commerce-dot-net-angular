@@ -1,4 +1,6 @@
-﻿using Core.Entities;
+﻿using API.DTOs;
+using AutoMapper;
+using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
@@ -11,10 +13,12 @@ namespace API.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private readonly IShoppingCartRepository shoppingCartRepository;
+        private readonly IMapper mapper;
 
-        public ShoppingCartController(IShoppingCartRepository shoppingCartRepository)
+        public ShoppingCartController(IShoppingCartRepository shoppingCartRepository, IMapper mapper)
         {
             this.shoppingCartRepository = shoppingCartRepository;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -27,9 +31,11 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ShoppingCart>> UpdateCart(ShoppingCart cart)
+        public async Task<ActionResult<ShoppingCart>> UpdateCart(ShoppingCartDto cart)
         {
-            var updatedBasket = await shoppingCartRepository.UpdateShoppingCartAsync(cart);
+            var customerCart = mapper.Map<ShoppingCartDto, ShoppingCart>(cart);
+
+            var updatedBasket = await shoppingCartRepository.UpdateShoppingCartAsync(customerCart);
 
             return Ok(updatedBasket);
         }
