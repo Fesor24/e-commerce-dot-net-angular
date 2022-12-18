@@ -8,6 +8,6 @@ namespace API.DTOs
         [Required]
         public string Id { get; set; }
         [Required]
-        public List<ShoppingCartItemDto> Items { get; set; } = new List<ShoppingCartItemDto>();
+        public List<ShoppingCartItemDto> Items { get; set; }
     }
 }
