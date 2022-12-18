@@ -17,9 +17,17 @@
         </a>
       </div>
 
-      <div class="d-flex align-items-end col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
-      </div>
+      <ng-container *ngIf="(currentUser$ | async) === null">
+        <div class="d-flex align-items-end col-md-3 text-end">
+          <button routerLink="/account/login" type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button routerLink="/account/register" type="button" class="btn btn-primary">Register</button>
+        </div>
+
+      </ng-container>
+
+      <ng-container *ngIf="currentUser$ | async">
+        <a href="#">Welcome {{(currentUser$ | async).displayName}}</a>
+      </ng-container>
+
     </header>
   </div>

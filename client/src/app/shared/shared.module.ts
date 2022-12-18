@@ -4,6 +4,7 @@ import {PaginationModule} from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './Components/paging-header/paging-header.component';
 import { PagerComponent } from './Components/pager/pager.component';
 import { OrderTotalsComponent } from './order-totals/order-totals.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,13 +18,15 @@ import { OrderTotalsComponent } from './order-totals/order-totals.component'
     CommonModule,
     //pagination module has its own providers array and those providers need to be injected into our root module at startup
     //that is why we add forRoot()
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    ReactiveFormsModule
   ],
   exports: [
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
