@@ -3,7 +3,9 @@ using API.Extensions;
 using API.Helper;
 using API.Middleware;
 using Core.Interfaces;
+using Core.Services;
 using Infrastructure.Data;
+using Infrastructure.Data.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
@@ -18,6 +20,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddDbContext<AppIdentityDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
+});
+
+builder.Services.AddIdentityServices(builder.Configuration);
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(x =>
 {
@@ -40,6 +49,8 @@ builder.Services.AddCors(options =>
         policy.WithOrigins("https://localhost:4200");
     });
 });
+
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -66,6 +77,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseCors("CorsPolicy");
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
