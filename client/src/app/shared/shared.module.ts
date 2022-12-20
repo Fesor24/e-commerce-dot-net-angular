@@ -5,6 +5,8 @@ import { PagingHeaderComponent } from './Components/paging-header/paging-header.
 import { PagerComponent } from './Components/pager/pager.component';
 import { OrderTotalsComponent } from './order-totals/order-totals.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TextInputComponent } from './Components/text-input/text-input.component';
 
 
 
@@ -12,21 +14,25 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     PagingHeaderComponent,
     PagerComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    TextInputComponent
   ],
   imports: [
     CommonModule,
     //pagination module has its own providers array and those providers need to be injected into our root module at startup
     //that is why we add forRoot()
     PaginationModule.forRoot(),
-    ReactiveFormsModule
+    BsDropdownModule.forRoot(),
+    ReactiveFormsModule,
   ],
   exports: [
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
     OrderTotalsComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule,
+    TextInputComponent
   ]
 })
 export class SharedModule { }
