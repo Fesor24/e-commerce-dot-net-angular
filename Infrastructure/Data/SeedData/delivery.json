@@ -1,0 +1,26 @@
+[
+  {
+    "ShortName": "Express Delivery",
+    "Description": "Product will be delivered within 24-36 hours",
+    "DeliveryTime": "1-2 Days",
+    "Price": 4500
+  },
+  {
+    "ShortName": "Fast Delivery",
+    "Description": "Product will be delivered within 3-5 days",
+    "DeliveryTime": "3-5 Days",
+    "Price": 2500
+  },
+  {
+    "ShortName": "Normal Delivery",
+    "Description": "Product will be delivered within 5-10 days",
+    "DeliveryTime": "5-10 Days",
+    "Price": 1200
+  },
+  {
+    "ShortName": "Pickup",
+    "Description": "You will be required to pick up the product in the nearest pickup station",
+    "DeliveryTime": "1-2 Weeks",
+    "Price": 0
+  }
+]
