@@ -3,9 +3,9 @@ using API.Extensions;
 using API.Helper;
 using API.Middleware;
 using Core.Interfaces;
-using Core.Services;
 using Infrastructure.Data;
 using Infrastructure.Data.Identity;
+using Infrastructure.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -39,6 +39,8 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
 builder.Services.AddCors(options =>
@@ -52,6 +54,8 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
