@@ -21,7 +21,7 @@ namespace Core.Entities.Identity
                     Address = new Address
                     {
                         FirstName = "Fesor",
-                        lastName = "Wale",
+                        LastName = "Wale",
                         Street = "10 Maryland",
                         City = "Ikeja",
                         State = "Lagos",
