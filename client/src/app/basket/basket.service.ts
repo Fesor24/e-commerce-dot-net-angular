@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { Basket, IBasket, IBasketItem, IBasketTotals } from '../shared/Models/basket';
+import { IDeliveryMethod } from '../shared/Models/deliveryMethod';
 import { IGames } from '../shared/Models/games';
 
 @Injectable({
@@ -24,7 +25,14 @@ export class BasketService {
   //passing the basketTotalSource behaviorSubject as an observable
   basketTotalSource$ = this.basketTotalSource.asObservable();
 
+  shipping = 0;
+
   constructor(private http: HttpClient) { }
+
+  setShippingPrice(deliveryMethod: IDeliveryMethod){
+    this.shipping = deliveryMethod.price
+    this.calculateTotal();
+  }
 
   //This method is calling our api and getting the shopping cart with the id from the redis server
   getBasket(id:string){
@@ -119,6 +127,11 @@ export class BasketService {
     }
   }
 
+  deleteBasketFromLocalStorage(id: string){
+    this.basketSource.next(null)
+    this.basketTotalSource.next(null);
+    localStorage.removeItem('basket_id');
+  }
 
   deleteBasket(basket: IBasket) {
     return this.http.delete(this.baseUrl + 'shoppingcart?id=' + basket.id).subscribe(() => {
@@ -175,7 +188,7 @@ export class BasketService {
   private calculateTotal(){
     const basket = this.getCurrentBasketValue();
 
-    const shipping = 0;
+    const shipping = this.shipping;
 
     //b represents our items
     //a represent the number we are returning back
