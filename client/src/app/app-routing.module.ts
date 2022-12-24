@@ -15,6 +15,9 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./checkout/checkout.module').then(x => x.CheckoutModule)},
   {path: 'account', loadChildren: () => import('./account/account.module').then(x => x.AccountModule)},
+  {path: 'orders',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./orders/orders.module').then(x => x.OrdersModule)},
   //this is a wild card, when someone enters a bad url, he will be redirected to the not-found page
   {path: '**', redirectTo: 'not-found', pathMatch: 'full'}
 ];

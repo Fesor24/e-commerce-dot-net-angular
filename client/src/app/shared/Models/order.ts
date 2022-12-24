@@ -26,3 +26,16 @@ export interface IOrder {
     status: number;
     paymentIntentId: string;
 }
+
+export interface IOrderReturn{
+  id: number;
+  orderDate: string;
+  shipToAddress: IAddress;
+  deliveryMethods: string;
+  orderItems: IOrderItem[];
+  subTotal: number;
+  shippingPrice: number;
+  total: number;
+  status: number;
+  paymentIntentId: string;
+}
