@@ -25,7 +25,7 @@ namespace Core.Entities.Identity
                         Street = "10 Maryland",
                         City = "Ikeja",
                         State = "Lagos",
-                        ZipCode = "324-212"
+                        ZipCode = "324212"
                     }
                 };
 
