@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ShoppingCartController>> GetCartById(string id)
+        public async Task<ActionResult<ShoppingCart>> GetCartById(string id)
         {
             var cart = await shoppingCartRepository.GetShoppingCartAsync(id);
 
