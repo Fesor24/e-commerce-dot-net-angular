@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
   <div class="row" *ngIf="order">
     <div class="col-8">
       <div>
@@ -27,9 +27,9 @@
                   <div class="p-2">
                     <img src="{{item.pictureUrl}}" alt="{{item.productName}}"
                     class="img-fluid"
-                    style="max-height: 50px">
+                    style="max-height: 50px; min-width: 50px;max-width: 50px">
 
-                    <div class="ml-3 d-inline-block align-middle">
+                    <div class="ms-3 d-inline-block align-middle">
                       <h5 class="mb-0">
                         {{item.productName}}
                       </h5>
@@ -67,7 +67,7 @@
           </li>
 
           <li class="d-flex justify-content-between ps-3 border-bottom">
-            <strong class="text-muted">Shipping and handling Subtotal</strong>
+            <strong class="text-muted">Shipping cost</strong>
             <strong>{{order.shippingPrice | currency:'₦'}}</strong>
           </li>
 
