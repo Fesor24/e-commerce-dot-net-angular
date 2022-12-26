@@ -1,9 +1,9 @@
-<div class="row pt-5 mt-5" *ngIf="game">
-    <div class="col-6">
+<div class="row pt-5 mt-5" *ngIf="game" style="overflow: hidden;">
+    <div class="col-6 ms-4" style="border-radius: 20px;">
         <img src="{{game.pictureUrl}}" alt="{{game.name}}" class="img-fluid w-100">
     </div>
 
-    <div class="col-6">
+    <div class="col-4">
         <h3>{{game.name}}</h3>
         <p>{{game.price | currency: '₦'}}</p>
 
@@ -15,13 +15,12 @@
             <button (click)="addItemToBasket()" class="btn btn-outline-primary btn-lg ml-4 ms-3">Add to cart</button>
         </div>
 
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-12 ml-3">
-            <h4>Description</h4>
-            <p>{{game.description}}</p>
+        <div class="mt-5">
+        <h4>Description</h4>
+        <p>{{game.description}}</p>
         </div>
+
+
     </div>
 
 </div>

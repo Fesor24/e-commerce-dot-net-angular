@@ -55,11 +55,15 @@ export class AppComponent implements OnInit {
     loadCurrentWishlist(){
       const wishlistId = localStorage.getItem('wishlist_id');
 
-      this.wishlistService.getWishlist(wishlistId).subscribe(() => {
-        console.log('wishlist initialised')
-      }, error => {
-        console.log(error);
-      })
+      if(wishlistId){
+        this.wishlistService.getWishlist(wishlistId).subscribe(() => {
+          console.log('wishlist initialised')
+        }, error => {
+          console.log(error);
+        })
+      }
+
+
     }
 
 
