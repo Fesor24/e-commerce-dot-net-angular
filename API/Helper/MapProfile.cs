@@ -32,6 +32,10 @@ namespace API.Helper
                 .ForMember(x => x.ProductName, o => o.MapFrom(b => b.ItemOrdered.ProductName))
                 .ForMember(x => x.PictureUrl, o => o.MapFrom(b => b.ItemOrdered.PictureUrl))
                 .ForMember(x => x.PictureUrl, o => o.MapFrom<OrderItemUrlResolver>());
+
+            CreateMap<WishlistItemDto, WishlistItem>();
+
+            CreateMap<WishlistDto, Wishlist>();
         }
     }
 }
