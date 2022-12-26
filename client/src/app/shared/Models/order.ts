@@ -23,7 +23,7 @@ export interface IOrder {
     deliveryMethods: string;
     orderItems: IOrderItem[];
     subTotal: number;
-    status: number;
+    status: string;
     paymentIntentId: string;
 }
 
@@ -36,6 +36,6 @@ export interface IOrderReturn{
   subTotal: number;
   shippingPrice: number;
   total: number;
-  status: number;
+  status: string;
   paymentIntentId: string;
 }
