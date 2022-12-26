@@ -1,0 +1,87 @@
+<div class="container mt-5 pt-5">
+  <div *ngIf="(wishlist$ | async) === null">
+    <p>There are no items in your wishlist</p>
+  </div>
+
+  <div *ngIf="wishlist$ | async">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="bg-light border-0" scope="col">
+              <div class="p-2 ps-3 pe-3 text-uppercase">Game</div>
+            </th>
+            <th class="bg-light border-0" scope="col">
+              <div class="p-2 ps-3 pe-3 text-uppercase">Genre</div>
+            </th>
+
+
+            <th class="border-0 bg-light" scope="col">
+              <div class="p-2 text-uppercase">Price</div>
+            </th>
+
+            <th class="border-0 bg-light" scope="col">
+              <div class="p-2 text-uppercase"></div>
+            </th>
+
+            <th class="border-0 bg-light" scope="col">
+              <div class="p-2 text-uppercase"></div>
+            </th>
+          </tr>
+        </thead>
+
+        <tr *ngFor="let item of (wishlist$ | async).items">
+          <th scope="row">
+            <div class="p-2">
+              <img
+                src="{{ item.pictureUrl }}"
+                alt="{{ item.gameName }}"
+                style="max-height: 50px; min-width: 50px; max-width: 50px"
+                class="img-fluid"
+              />
+              <div class="ms-3 d-inline-block align-middle">
+                <h5 class="mb-0">
+                  <a
+                    routerLink="/shop/{{ item.id }}"
+                    class="text-dark"
+                    style="text-decoration: none"
+                    >{{ item.gameName }}</a
+                  >
+                </h5>
+              </div>
+            </div>
+          </th>
+
+          <td class="align-middle">
+            <strong>{{ item.genre }}</strong>
+          </td>
+
+          <td class="align-middle">
+            <strong>{{ item.price | currency : "₦" }}</strong>
+          </td>
+
+          <td class="align-middle text-center">
+            <a class="text-secondary">
+              <i
+                (click)="addToCart(item.id)"
+                class="fa-solid fa-cart-shopping"
+                style="font-size: 2em; cursor: pointer; color:black"
+              ></i>
+            </a>
+          </td>
+
+          <td class="align-middle text-center">
+            <a class="text-danger">
+              <i
+                (click)="removeWishlistItem(item)"
+                class="fa fa-trash"
+                style="font-size: 2em; cursor: pointer"
+              ></i>
+            </a>
+          </td>
+        </tr>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
