@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject, map, timeout } from 'rxjs';
 import { Basket, IBasket, IBasketItem, IBasketTotals } from '../shared/Models/basket';
 import { IDeliveryMethod } from '../shared/Models/deliveryMethod';
 import { IGames } from '../shared/Models/games';
@@ -27,11 +28,28 @@ export class BasketService {
 
   shipping = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
+
+  createPaymentIntent(){
+    return this.http.post(this.baseUrl + 'payment/' + this.getCurrentBasketValue().id, {})
+    .pipe(
+      map((basket: IBasket) => {
+        this.basketSource.next(basket);
+      }, error => {
+        console.log(error);
+      })
+    )
+  }
 
   setShippingPrice(deliveryMethod: IDeliveryMethod){
     this.shipping = deliveryMethod.price
+    const basket = this.getCurrentBasketValue();
+
+    basket.deliveryMethodId = deliveryMethod.id
+    basket.shippingPrice = deliveryMethod.price;
     this.calculateTotal();
+
+    this.setBasket(basket);
   }
 
   //This method is calling our api and getting the shopping cart with the id from the redis server
@@ -41,6 +59,7 @@ export class BasketService {
         map((basket: IBasket) => {
           //we are updating our basketsource
           this.basketSource.next(basket);
+          this.shipping = basket.shippingPrice;
           this.calculateTotal();
         })
       )
@@ -77,6 +96,8 @@ export class BasketService {
 
     //Updating the basket on our redis server
     this.setBasket(basket);
+
+    this.toastr.success("Item added to cart");
   }
 
   incrementItemQuantity(item: IBasketItem){
