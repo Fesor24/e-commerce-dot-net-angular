@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from './account/account.service';
 import { BasketService } from './basket/basket.service';
+import { WishlistService } from './wishlist/wishlist.service';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class AppComponent implements OnInit {
   title = 'client';
 
 
-  constructor(private basketService: BasketService, private accountService: AccountService) {}
+  constructor(private basketService: BasketService, private accountService: AccountService,
+    private wishlistService: WishlistService) {}
 
 
   ngOnInit(): void {
@@ -21,6 +23,8 @@ export class AppComponent implements OnInit {
     this.loadBasket();
 
     this.loadCurrentUser();
+
+    this.loadCurrentWishlist();
   }
 
   loadBasket(){
@@ -47,5 +51,21 @@ export class AppComponent implements OnInit {
         console.log(error)
       })
     }
+
+    loadCurrentWishlist(){
+      const wishlistId = localStorage.getItem('wishlist_id');
+
+      this.wishlistService.getWishlist(wishlistId).subscribe(() => {
+        console.log('wishlist initialised')
+      }, error => {
+        console.log(error);
+      })
+    }
+
+
+
+
   }
+
+
 
