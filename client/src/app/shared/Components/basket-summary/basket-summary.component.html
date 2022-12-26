@@ -23,12 +23,12 @@
         <tr *ngFor="let item of (basket$ | async).items">
           <th scope="row">
             <div class="p-2">
-              <img src="{{item.pictureUrl}}" alt="{{item.gameName}}" style="max-height:50px; min-width:60px;max-width: 60px" class="img-fluid">
-              <div class="ml-3 d-inline-block align-middle">
+              <img src="{{item.pictureUrl}}" alt="{{item.gameName}}" style="max-height:50px; min-width:50px;max-width: 50px" class="img-fluid">
+              <div class="ms-3 d-inline-block align-middle">
                 <h5 class="mb-0">
-                  <a routerLink="/shop/{{item.id}}" class="text-dark">{{item.gameName}}</a>
+                  <a routerLink="/shop/{{item.id}}" class="text-dark" style="text-decoration: none;">{{item.gameName}}</a>
                 </h5>
-                <span class="text-muted font-weight-normal font-italic d-block">Genre: {{item.genre}}</span>
+                <span class="text-muted font-weight-normal font-italic d-block">{{item.genre}}</span>
               </div>
             </div>
           </th>
