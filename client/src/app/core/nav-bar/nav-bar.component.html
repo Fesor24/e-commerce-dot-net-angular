@@ -1,18 +1,18 @@
-<div class="container-fluid">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <h2 routerLink="/" style="cursor:pointer">GAM<span class="text-danger">ES</span></h2>
+<!--
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between py-3 mb-4 border-bottom shadow-sm fixed-top">
+      <h2 routerLink="/" style="cursor:pointer">Game<span class="text-danger">Bots</span></h2>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-uppercase">
-        <li><a routerLink="/" class="nav-link px-2" routerLinkActive="active"
+      <nav class="d-flex justify-content-between my-2 my-md-0 mr-md-3 text-uppercase">
+        <a routerLink="/" class="nav-link px-2" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact:true}"
-          >Home</a></li>
-        <li><a routerLink="/shop" class="nav-link px-2" routerLinkActive="active">Shop</a></li>
-        <li><a href="#" class="nav-link px-2">Pricing</a></li>
-      </ul>
+          >Home</a>
+        <a routerLink="/shop" class="nav-link px-2" routerLinkActive="active">Shop</a>
+        <a href="#" class="nav-link px-2">Pricing</a>
+        </nav>
 
-      <div class="d-flex align-items-end col-md-3 text-end">
+      <div class="d-flex align-items-center">
         <a routerLink="/basket">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping fa-2x mr-5 text-dark"></i>
             <div *ngIf="(basket$ | async) as basket" class="cart-no">{{basket.items.length}}</div>
         </a>
       </div>
@@ -49,5 +49,55 @@
 
       </ng-container>
 
-    </header>
-  </div>
+    </div> -->
+
+
+
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
+
+      <h2 routerLink="/" style="cursor:pointer"> <i class='bx bxs-game' style="color:#e2820dea"></i>Game<span style="color:#e2820dea">Bots</span></h2>
+      <nav class="my-2 my-md-0 mr-md-3 text-uppercase" style="font-size: larger;">
+        <a class="p-2" [routerLink]="['/']" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}" >Home</a>
+        <a class="p-2" routerLink="/shop" routerLinkActive="active">Shop</a>
+        <a class="p-2" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </nav>
+      <div class="d-flex align-items-center">
+
+        <a routerLink="/wishlist">
+          <i class="fa-regular fa-heart fa-2x me-4"></i>
+        </a>
+        <a routerLink="/basket" class="position-relative">
+          <i class="fa fa-shopping-cart fa-2x me-5 text-dark"></i>
+          <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
+        </a>
+        <ng-container *ngIf="(currentUser$ | async) === null">
+          <a routerLink="/account/login" ><i class="bx bx-user" style="font-size:30px; font-weight:bold"></i></a>
+          <!-- <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a> -->
+        </ng-container>
+
+        <ng-container *ngIf="currentUser$ | async">
+          <div class="dropdown ml-3 mr-5" dropdown>
+            <a class="dropdown-toggle" style="cursor: pointer" dropdownToggle>
+              <strong>Welcome  {{(currentUser$ | async).displayName}}</strong>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" style="cursor: pointer;" *dropdownMenu>
+              <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+                <i class="fa fa-shopping-cart mr-3"></i> View Basket
+              </a>
+              <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
+                <i class="fa fa-history mr-3"></i> View Orders
+              </a>
+              <div class="dropdown-divider"></div>
+              <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
+                <i class="fa fa-sign-out mr-3"></i> Logout
+              </a>
+            </div>
+          </div>
+
+        </ng-container>
+
+      </div>
+
+    </div>
+

@@ -1,4 +1,4 @@
-<div class="card h-75 shadow-sm">
+<!-- <div class="card h-75 shadow-sm">
     <img class="img-fluid bg-light h-50" src="{{game.pictureUrl}}" alt="{{game.name}}">
 
 
@@ -17,4 +17,21 @@
         </div>
 
     </div>
-  </div>
+  </div> -->
+
+  <div class="products">
+    <img src="{{game.pictureUrl}}" alt="{{game.name}}">
+    <div class="layer">
+        <h3>{{game.name}}</h3>
+        <p class="add-to-cart">
+            <i (click)= "addItemToBasket()" class='bx bx-cart-download' style="cursor:pointer"></i>
+            <i class="fa-regular fa-heart" style="cursor:pointer"></i>
+            <i class="fa-regular fa-eye" routerLink="/shop/{{game.id}}" style="cursor:pointer"></i>
+
+        </p>
+        <p>{{game.price | currency: '₦'}}</p>
+
+
+    </div>
+
+</div>
