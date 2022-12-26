@@ -14,11 +14,13 @@ namespace Infrastructure.Data.Services
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IShoppingCartRepository shoppingCartRepository;
+        private readonly IPaymentService paymentService;
 
-        public OrderService(IUnitOfWork unitOfWork, IShoppingCartRepository shoppingCartRepository)
+        public OrderService(IUnitOfWork unitOfWork, IShoppingCartRepository shoppingCartRepository, IPaymentService paymentService)
         {
             this.unitOfWork = unitOfWork;
             this.shoppingCartRepository = shoppingCartRepository;
+            this.paymentService = paymentService;
         }
         public async Task<Order> CreateOrderAsync(string buyerEmail, int deliveryMethodId, string cartId, Address shippingAddress)
         {
@@ -43,15 +45,24 @@ namespace Infrastructure.Data.Services
 
             var subTotal = items.Sum(item => item.Price * item.Quantity);
 
-            var order = new Order(items, buyerEmail, shippingAddress, subTotal, deliveryMethod);
+            var spec = new OrderByPaymentIntentIdSpecification(cart.PaymentIntentId);
+
+            var existingOrder= await unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+
+            if(existingOrder != null)
+            {
+                unitOfWork.Repository<Order>().Delete(existingOrder);
+
+                await paymentService.CreateOrUpdatePaymentIntent(cart.PaymentIntentId);
+            }
+
+            var order = new Order(items, buyerEmail, shippingAddress, subTotal, deliveryMethod, cart.PaymentIntentId);
 
             unitOfWork.Repository<Order>().Add(order);
 
             var result = await unitOfWork.Complete();
 
             if (result <= 0) return null;
-
-            await shoppingCartRepository.DeleteShoppingCartAsync(cartId); 
 
             return order;
         }
