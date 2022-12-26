@@ -39,6 +39,8 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 
 builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 
+builder.Services.AddScoped<IWishlistRepository, WishlistRepository>();
+
 builder.Services.AddScoped<IPaymentService, PaymentService>();  
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
