@@ -25,6 +25,8 @@ namespace Infrastructure.Data.Configuration
             builder.HasMany(o => o.OrderItems).WithOne().OnDelete(DeleteBehavior.Cascade);
 
             builder.Property(x => x.SubTotal).HasColumnType("decimal(18,2)");
+
+            builder.Property(c => c.PaymentIntentId).IsRequired(false);
         }
     }
 }
