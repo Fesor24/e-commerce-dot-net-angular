@@ -43,7 +43,7 @@ namespace API.DTOs
         /// <summary>
         /// Status of order
         /// </summary>
-        public OrderStatus Status { get; set; }
+        public string Status { get; set; }
 
     }
 }
